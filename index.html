@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="signup" class="form">
+            <h1>Sign Up</h1>
+
+            
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email"> 
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="country">Country:</label>
+                <input type="text" name="country" id="country">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                name="zipcode" id="zipcode">
+                <small></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" autocomplete="off" >
+                <small></small>
+            </div>
+
+
+            <div class="form-field">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <input type="submit" value="Sign Up" class="btn">
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
